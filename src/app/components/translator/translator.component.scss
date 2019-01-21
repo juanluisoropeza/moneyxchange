@@ -1,0 +1,16 @@
+#calculator {
+  background-color:#ececec;
+  padding:6% 0px;
+  .form-control {
+    border-radius:0;
+    &:focus {
+      border-color:#343a40;
+      box-shadow:none;
+    }
+  }
+  .btn {
+    border-radius:0;
+    margin: 60px auto 10px;
+    padding: .6rem 5rem;
+  }
+}

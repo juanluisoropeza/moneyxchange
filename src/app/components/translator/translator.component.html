@@ -1,0 +1,34 @@
+<section>
+    <article id="calculator">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1 items">
+            <form id="form1" [formGroup]="form">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="txt_euro">EURO</label>
+                    <input type="text" name="euro" formControlName="euro" class="form-control" id="euro" placeholder="EURO" #euro myCurrencyFormatter required>
+                    <div *ngIf="euro.touched && !euro.valid">
+                      <div *ngIf="euro.errors.required">Euro Requerido!</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="txt_usd">USD</label>
+                    <input type="text" class="form-control" name="usd" formControlName="usd" id="usd" placeholder="USD" #usd myCurrencyFormatter>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4 offset-lg-4 text-center">
+                  <button class="btn btn-lg btn-dark" (click)="validateForm(euro.value)" id="calculate" type="button">CALCULATE</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
